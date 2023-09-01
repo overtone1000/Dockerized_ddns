@@ -10,6 +10,6 @@ TAG=latest
 FULLTAG=$REGISTRY/$UNAME/$IMAGE_NAME:$TAG
 
 sudo docker login -u "$UNAME" $REGISTRY
-sudo docker build -t $TAG ./build
+sudo docker build -t $TAG ./
 sudo docker image tag $IMAGE_NAME:$TAG $FULLTAG
 sudo docker push $FULLTAG
