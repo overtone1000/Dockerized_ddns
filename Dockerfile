@@ -1,4 +1,5 @@
-FROM ubuntu:latest
+#need lunar for ddclient v 3.10
+FROM ubuntu:lunar
 
 #apt-get update threw errors on r-pi. Update host system as such:
 #cd /tmp
