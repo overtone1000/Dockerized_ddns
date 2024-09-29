@@ -14,7 +14,8 @@ RUN apt-get -y update && apt-get -y install ddclient curl libjson-any-perl
 RUN rm -drf /tmp/*
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*;
 
-
 EXPOSE 80
 
-ENTRYPOINT ["ddclient", "-foreground", "-noquiet", "-verbose", "-debug", "-file", "/etc/ddclient/ddclient.conf"]
+COPY entrypoint.sh entrypoint.sh
+
+ENTRYPOINT ["/bin/bash","entrypoint.sh"]
