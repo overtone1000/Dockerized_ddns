@@ -17,4 +17,4 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*;
 
 EXPOSE 80
 
-ENTRYPOINT ["ddclient", "-foreground", "-noquiet", "-verbose", "-debug", "-file /etc/ddclient/ddclient.conf"]
+ENTRYPOINT ["ddclient", "-foreground", "-noquiet", "-verbose", "-debug", "-file", "/etc/ddclient/ddclient.conf"]
